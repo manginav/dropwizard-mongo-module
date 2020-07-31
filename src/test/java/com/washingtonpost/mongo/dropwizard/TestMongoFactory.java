@@ -64,13 +64,13 @@ public class TestMongoFactory {
                 .isEqualTo("mongodb://whatever:567");
     }
 
-    @Test
+     @Test
     public void testMongoClientURIWithPrefix() {
         MongoFactory factory = new MongoFactory();
         factory.setPrefix("srv");
-        factory.setHosts("mongodb.example.host");
+        factory.setHosts("experimental-1-epdri.mongodb.net");
         assertThat(factory.buildMongoClientURI().toString())
-                .isEqualTo("mongodb+srv://mongodb.example.host");
+                .isEqualTo("mongodb+srv://experimental-1-epdri.mongodb.net");
     }
 
     @Test
